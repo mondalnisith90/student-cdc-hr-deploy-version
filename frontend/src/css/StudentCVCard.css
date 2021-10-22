@@ -1,0 +1,114 @@
+.student_cv_profile_image {
+  width: 160px;
+  height: 150px;
+  border-radius: 15px;
+}
+
+.resume_student_name {
+  text-align: start;
+  margin-top: 0px;
+  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  color: #333231;
+}
+
+.student_heading_text {
+  text-align: start;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.resume_subheading {
+  font-size: 18px;
+  font-weight: bold;
+  color: #c7025b;
+  text-align: start;
+  font-style: italic;
+  margin-top: -10px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.carrier_objective_text {
+  font-size: 15px;
+  color: #000000;
+  text-align: start;
+  margin-top: -15px;
+}
+
+.college_name_text {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+  text-align: start;
+  margin-top: 0px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.education_text {
+  font-size: 15px;
+  color: #000000;
+  text-align: start;
+  margin-top: -15px;
+}
+
+.project_name_text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000000;
+  margin-top: -15px;
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  text-align: center;
+}
+
+.project_text {
+  font-size: 15px;
+  color: #000000;
+  text-align: start;
+  margin-top: -15px;
+}
+
+.work_experience_name_text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000000;
+  margin-top: -15px;
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  text-align: center;
+}
+
+.work_experience_text {
+  font-size: 15px;
+  color: #000000;
+  text-align: start;
+  margin-top: -15px;
+}
+
+.language_name_text {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+  text-align: start;
+  margin-top: 0px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.language_text {
+  font-size: 15px;
+  color: #000000;
+  text-align: start;
+  margin-top: -17px;
+}
+
+.thankyou_text {
+  font-size: 30px;
+  font-weight: bold;
+  color: #c7025b;
+  text-align: center;
+  font-style: italic;
+  margin-top: 0px;
+  font-family: "Open Sans", sans-serif;
+}

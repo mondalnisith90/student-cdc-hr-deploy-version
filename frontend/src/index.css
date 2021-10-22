@@ -1,0 +1,24 @@
+
+html{
+  font-size:large;
+}
+.right{
+  display: flex;
+  flex-direction: row;
+}
+.left{
+  display: flex;
+  flex-direction: row;
+}
+.main{
+  display: flex   ;
+  justify-content: right;
+}
+.login{
+  padding-left: 5rem;
+  width: 50%;
+}
+.signup{
+  padding-left: 5rem;
+  width: 50%;
+}

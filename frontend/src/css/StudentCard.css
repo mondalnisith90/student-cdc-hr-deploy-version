@@ -1,0 +1,17 @@
+.student_card_image {
+  width: 160px;
+  height: 160px;
+}
+
+.hr_card_text {
+  font-size: 16px !important;
+}
+
+.home_details_button {
+  /* overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  text-align: justify; */
+}

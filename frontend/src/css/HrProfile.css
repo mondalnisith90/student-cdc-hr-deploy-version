@@ -1,0 +1,116 @@
+.myprofile_root_div {
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px 20px 10px 20px;
+  /* background-image: url("../images/blog2.jpg"); */
+}
+
+.header_div_style {
+  width: 700px;
+}
+
+.myprofile_main_div {
+  width: 400px;
+  background-color: white;
+  padding: 0px;
+  border-radius: 15px;
+}
+
+.myprofile_profile_pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 4px solid #aaabad;
+  object-fit: cover;
+}
+
+.myprofile_camera_icon {
+  font-size: 35px !important;
+  color: coral !important;
+  margin-left: -23px;
+  cursor: pointer;
+}
+
+.myprofile_user_name {
+  color: #1191ab;
+  font-size: 26px;
+  font-family: "Roboto Condensed", sans-serif;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+.myprofile_user_info_div {
+  padding: 30px 20px 10px 20px;
+}
+
+.myprofile_user_info_text {
+  color: black;
+  font-size: 17px;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.myprofile_hr {
+  background-color: black !important;
+  height: 2px !important;
+}
+
+.update_profile_button {
+  font-size: 16px !important;
+  margin-top: 15px !important;
+  margin-bottom: 20px !important;
+  text-transform: capitalize !important;
+  background-color: #11ab63 !important;
+}
+
+.myprofile_login_text {
+  font-size: 16px;
+  color: #e61e7b;
+  font-weight: 600;
+}
+.myprofile_login_text:hover {
+  color: #0267ba;
+}
+
+.myProfile_edit_icon {
+  font-size: 25px !important;
+  color: #645959 !important;
+  cursor: pointer;
+}
+
+.myprofile_form_label {
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 8px;
+  margin-bottom: -5px;
+  margin-top: 8px;
+}
+
+.update_image_button {
+  text-transform: capitalize !important;
+  background-color: green !important;
+  color: white !important;
+}
+
+.cancel_image_button {
+  text-transform: capitalize !important;
+}
+
+.skill_div {
+  background-color: #cc064b;
+  width: 80px;
+  height: 40px;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  padding-top: 5px;
+  font-weight: 500;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.edit_profile_icon {
+  width: 30px !important;
+  height: 26px !important;
+  color: #645959 !important;
+  cursor: pointer;
+}
