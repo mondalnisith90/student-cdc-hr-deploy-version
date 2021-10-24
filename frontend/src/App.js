@@ -45,12 +45,14 @@ const App = () => {
         console.log("hello home student is called");
         console.log(currentUserData.type);
         apiUrl = `/student/get-profile`;
+        // apiUrl = `http://localhost:8000/student/get-profile`;
         // setCurrentUserData({...currentUserData, isGranted: "false"});
       }else if(currentUserData.type == "hr"){
         //Fetch HR data from server when app is load
         console.log("hello home HR is called");
         console.log(currentUserData.type);
          apiUrl = `/hr/get-profile`;
+        //  apiUrl = `http://localhost:8000/hr/get-profile`;
         //  setCurrentUserData({...currentUserData, isGranted: "true"});
       }else{
         //Fetch Admin data from server when app is load

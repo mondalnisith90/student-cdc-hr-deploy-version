@@ -1,0 +1,7 @@
+@media (max-width: 763px) {
+  .home_refresh_button {
+    /* width: 200px !important; */
+    margin-bottom: 10px;
+    margin-left: -155px;
+  }
+}

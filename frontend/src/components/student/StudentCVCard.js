@@ -18,11 +18,11 @@ const StudentCVCard = ({studentData, modalId})=>{
                    <div className="modal-header">
                        {/* <h4 className="modal-title" id="exampleModalLabel">Resume</h4> */}
                       
-                    <div className="row m-auto" style={{width: "70rem"}}>
-                      <div className="col-4 text-start">
-                        <img className="img-fluid student_cv_profile_image" style={{width: "160px", height: "155px", border: "3px solid #ee00aa", borderRadius: "50%", objectFit: "cover"}} src={studentData.profile_pic=="default" ? defaultUser : studentData.profile_pic} alt="profile image"  />
+                    <div className="row m-auto " style={{width: "70rem"}}>
+                      <div className="col-lg-4 col-md-4 col-sm-12 col-12 text-start">
+                        <img className=" img-fluid student_cv_profile_image"  src={studentData.profile_pic=="default" ? defaultUser : studentData.profile_pic} alt="profile image"  />
                       </div>
-                      <div className="col-8">
+                      <div className="col-lg-8 col-md-8  col-sm-12 col-12">
                        <h3 className="resume_student_name">{studentData.name}</h3>
                        <p className="student_heading_text" style={{marginTop: "-5px"}}><b>Email Id: </b> {currentUserData.isAlreadyLogin ? studentData.email : "########@gmail.com"}</p>
                        <p className="student_heading_text"  style={{marginTop: "-15px"}}><b>Phone No: </b>{currentUserData.isAlreadyLogin ? studentData.phoneNumber : "##########"}</p>
@@ -50,7 +50,7 @@ const StudentCVCard = ({studentData, modalId})=>{
                       {
                        studentData.skills ? studentData.skills.map((skill, index)=>{
                             return(
-                                <div className="col-md-2 col-sm-3 my-0" style={{textTransform: "capitalize"}} key={index}>{skill}</div>
+                                <div className="col-lg-3 col-md-3 col-sm-4 col-6 my-2" style={{textTransform: "capitalize", fontSize: "14px", fontWeight: "bold"}} key={index}>{skill}</div>
                             )
                         }) : null
                       }
@@ -62,7 +62,7 @@ const StudentCVCard = ({studentData, modalId})=>{
                      {
                        studentData.education ? studentData.education.map((edu, index)=>{
                             return(
-                                <div className="col-6 mb-1" key={index}>
+                                <div className=" col-lg-6 col-md-6 col-sm-12 col-12 mb-1" key={index}>
                                 <div className="text-start">
                                   <p className="college_name_text">{edu.collegeName}</p>
                                   <p className="education_text"><b>Degree: </b>{edu.degree}</p>
@@ -124,7 +124,7 @@ const StudentCVCard = ({studentData, modalId})=>{
                      {
                         studentData.languages ?   studentData.languages.map((language, index)=>{
                              return(
-                                <div className="col-6 mb-1">
+                                <div className="col-lg-6 col-md-6 col-sm-12 col-12 mb-1">
                                  <div className="text-start">
                                    <p className="language_name_text">{language.language}</p>
                                    <p className="language_text"><b>Proficiency Level: </b>{language.proficiency}</p>
@@ -143,7 +143,7 @@ const StudentCVCard = ({studentData, modalId})=>{
                       {
                         studentData.fieldsOfInterest ?  studentData.fieldsOfInterest.map((interest, index)=>{
                               return(
-                                <div className="col-3" key={index}>{interest}</div>
+                                <div className="col-lg-4 col-md-4 col-sm-6 col-6" key={index}><p className="field_of_interest">{interest}</p></div>
                               )
                           }) : null
                       }
@@ -158,8 +158,8 @@ const StudentCVCard = ({studentData, modalId})=>{
                              return(
                                 <div className="col-6 mb-1">
                                 <div className="text-start">
-                                  <p className="language_name_text">{video.subject}</p>
-                                  <p className="language_text"><b>Video Link: </b><a href={video.videoUrl} target="_blank">{video.videoUrl}</a></p>
+                                  <p className="video_name_text">{video.subject}</p>
+                                  <p className="video_text"><b>Video Link: </b><a href={video.videoUrl} target="_blank">{video.videoUrl}</a></p>
                                  </div>
                                 </div>
                              )

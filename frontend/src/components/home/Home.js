@@ -4,6 +4,7 @@ import HomeStudentCard from "./HomeStudentCard";
 import { useContext } from "react";
 import {currentUserDataContext} from "../../App";
 import LinearProgress from '@material-ui/core/LinearProgress';
+import "../../css/Home.css";
 
 
 const Home = ()=>{
@@ -17,6 +18,7 @@ const Home = ()=>{
     const [linearProgressbarState, setLinearProgressbarState] = useState(false);
     const fetchAllStudentsFromServer = async ()=>{
         const apiUrl = `/student/viewall`;
+        // const apiUrl = `http://localhost:8000/student/viewall`;
         try {
             setLinearProgressbarState(true);
             const serverResponse = await axios.get(apiUrl);
@@ -93,17 +95,19 @@ const Home = ()=>{
     return(
         <>
     <div className="home_root_div">
-     <div className="d-flex justify-content-center" style={{marginTop: "80px"}}>
-         {/* <div style={{marginTop: "4px", marginRight: "5px", backgroundColor: "#d60056", color: "white", padding: "8px", fontSize: "16px", borderRadius: "8px", cursor: "pointer"}}>Refresh</div> */}
-         <button type="button" class="btn btn-outline-danger" onClick={refreshButtonClick} style={{marginRight: "8px", fontSize: "16px"}}>Refresh</button>
-         <div>
-        <form class="form-inline my-2 my-lg-0" onSubmit={searchFormSubmit}>
+     <div className="d-flex p-1 justify-content-center align-items-center  flex-lg-row flex-md-row flex-sm-column flex-column" style={{marginTop: "80px"}}>
+         <div className="">
+           <button type="button" class="btn btn-outline-danger home_refresh_button" onClick={refreshButtonClick} style={{marginRight: "8px", fontSize: "16px"}}>Refresh</button>
+         </div>
+         <div className="">
+         <form class="form-inline my-0 my-lg-0" onSubmit={searchFormSubmit}>
          <input class="form-control mr-sm-2" type="search" placeholder="Search Student..." aria-label="Search" onChange={inputFieldChange} name="studentSearchField" value={studentSearchField} />
          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
        </form>
+     </div> 
      </div>
-      
-     </div>
+
+
      <hr/>
      <div style={{height: "3px"}}>
       {linearProgressbarState ? <LinearProgress color="secondary" /> : null }
@@ -111,11 +115,11 @@ const Home = ()=>{
       {
         allStudentsData.length ? null : <p style={{color: "#ee00aa", fontSize: "30px", fontWeight: "600", textAlign: "center"}}>Data not found</p>
       }  
-     <div className="row mt-4 container-fluid ">
+     <div className="row mt-1 p-0 container-fluid">
      {
         allStudentsData.map((student, index)=>{
             return(
-                <div className="col-lg-3 col-md-3 col-sm-6 col-12 m-auto text-center mb-4 d-flex justify-content-center" key={index}>
+                <div className="col-lg-3 col-md-6 col-sm-6 col-12 m-auto d-block ps-md-4 ps-lg-4  mb-3 p-sm-1 ps-sm-3 ps-4 p-0 p-lg-3 p-md-3  d-flex justify-content-center  " key={index}>
                   <HomeStudentCard studentData={student} modalId={"exampleModalstudenthomecard"+student._id} hrSortlistedProfileData={hrSortlistedProfileData} fetchHrProfileDataFromServer={fetchHrProfileDataFromServer} />
                 </div>
             )
