@@ -36,9 +36,9 @@ const StudentCard = ({studentData, fetchDataFromServer})=>{
     return(
         <>
            <ToastContainer />
-           <div className="card shadow" style={{ width: "18rem", height: "25rem" }} >
-           <div className="text-center p-2">
-           <img className="card-img-top img-fluid student_card_image"   style={{width: "100%", height: "200px", objectFit: "fill"}}  src={studentData.profile_pic=="default" ? defaultUser : studentData.profile_pic}  alt="Card image cap" />
+           <div className="card shadow" style={{ width: "100%", height: "520px" }} >
+           <div className="text-center p-0">
+           <img className="card-img-top img-fluid student_card_image"   style={{width: "100%", height: "260px", objectFit: "fill"}}  src={studentData.profile_pic=="default" ? defaultUser : studentData.profile_pic}  alt="Card image cap" />
            </div>
            {/* <hr/> */}
          
@@ -54,7 +54,9 @@ const StudentCard = ({studentData, fetchDataFromServer})=>{
               }) : "No skill"
             }
            </span> </p>
-           <div className="d-flex justify-content-start align-content-center">
+         
+         </div>
+         <div className="d-flex justify-content-start align-content-center pl-3 pb-4">
              <div>
                <button href="#" className="btn btn-success" data-bs-toggle="modal" data-bs-target={"#exampleModalstudenthrprofilecard"+studentData._id} >Details</button>
              </div>
@@ -62,7 +64,6 @@ const StudentCard = ({studentData, fetchDataFromServer})=>{
                <button href="#" className="btn btn-danger ml-3" onClick={studentCardDeleteBtn}>Delete</button>
              </div>
            </div>
-         </div>
          </div>
          <StudentCVCard studentData={studentData} modalId={"exampleModalstudenthrprofilecard"+studentData._id}  />
         </>

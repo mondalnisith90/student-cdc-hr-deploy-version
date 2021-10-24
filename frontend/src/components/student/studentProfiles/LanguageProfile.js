@@ -69,10 +69,10 @@ const LanguageProfile = ({studentLanguages, fetchStudentDataFromServer})=>{
         <div>
         <ToastContainer />
         <div className="row m-auto">
-          <div className="col-4">
+          <div className="col-6">
             <p style={{textAlign: "start", fontSize: "24px", color: "#ee00aa"}}><b>Languages</b></p>
           </div>
-          <div className="col-4 text-start">
+          <div className="col-6 text-start">
             <button type="button" className="btn btn-primary fw-bold" data-toggle="modal" data-target="#exampleModalCenterlanguage" style={{fontSize: "13px"}}>Add Langage</button>
           </div>
          </div>

@@ -50,6 +50,7 @@ const Login = () => {
         try {
             setProgressbarState(true);
             const apiUrl = `/student/signin`;
+            // const apiUrl = `http://localhost:8000/student/signin`;
             const serverResponse = await axios.post(apiUrl, inputFormData, {withCredentials: true});
             if(serverResponse.status == 200){
                 setProgressbarState(false);
@@ -71,14 +72,15 @@ const Login = () => {
 
     return (
     <>
-    <div className="login_root_div">
+    <section className="login_root_div d-flex justify-content-center align-items-center">
     <ToastContainer />
      <div className=" login_main_div shadow">
-      <h2 style={{color: "#e6054c", fontStyle: "italic", textAlign: "center"}}>Student Login</h2>
+      <h2 style={{color: "#e6054c", fontStyle: "italic", textAlign: "center", marginTop: "20px"}}>Student Login</h2>
       <hr/> 
-      <div className="login_form_div ">
-     <form action="POST" className="login" onSubmit={studentLoginFormSubmit}>
-      <div className="mb-3">
+      
+     <form action="POST" className="login w-100" onSubmit={studentLoginFormSubmit}>
+     <div className="login_form_div p-3" style={{marginLeft: "-80px"}}>
+      <div className="mb-3 ">
           <label for="exampleInputEmail1 " className="form-label form_input_label"><EmailIcon className="login_icon"/>Email address*</label>
           <input type="email" placeholder="Enter email address" className="form-control login_form_input" id="exampleInputEmail1" name="email" value={email} onChange={inputFieldChange} aria-describedby="emailHelp"/>
       </div>
@@ -87,7 +89,9 @@ const Login = () => {
           <input type="password" placeholder='Enter password' className="form-control login_form_input" name="password" value={password} onChange={inputFieldChange} id="exampleInputPassword1"/>
       </div>
 
-      <div className="d-flex justify-content-start align-content-center" style={{width: "420px"}}>
+
+      <div className="row" >
+      <div className="col-lg-6 col-md-12 col-sm-12 col-12 d-flex justify-content-start align-items-center pb-3 ps-3">
       <div>
       <button type="submit" className="btn btn-success mt-1" style={{backgroundColor: "#04bf62", border: "0px"}}>Login<ExitToAppIcon className="ml-1"/></button>
       </div>
@@ -96,15 +100,18 @@ const Login = () => {
         progressbarState ? <CircularProgress style={{color: "green"}} /> : null
       }
       </div>
-      <div>
+      </div>
+      <div  className="col-lg-6 col-md-12 col-sm-12 col-12 mt-md-1 mt-sm-1 mt-1 text-start">
         <NavLink exact to="/signup" ><p className=" mt-2">New User? Create Account</p></NavLink>
       </div>
+
+      </div>
+
       </div>
       
     </form>
     </div>
-     </div>
-    </div>
+    </section>
 
     </>
     );

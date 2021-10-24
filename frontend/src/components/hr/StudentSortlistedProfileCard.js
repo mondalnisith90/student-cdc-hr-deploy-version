@@ -24,6 +24,8 @@ const StudentSortlistedProfileCard = ({studentId, fetchHrProfileDataFromServer})
 
     const fetchStudentProfileDataFromServer = async ()=>{
         const apiUrl = `/student/search/${studentId}`;
+        // const apiUrl = `http://localhost:8000/student/search/${studentId}`;
+        // const apiUrl = `/student/search/${studentId}`;
         try {
             const serverResponse = await axios.get(apiUrl);
             if(serverResponse.status == 200){
@@ -67,15 +69,15 @@ const StudentSortlistedProfileCard = ({studentId, fetchHrProfileDataFromServer})
           studentProfileData ? 
           <>
           
-        <div className="col-lg-3 col-md-3 col-sm-6 col-12 m-auto text-center mb-3 d-flex justify-content-center" >
+        <div className="col-lg-3 col-md-6 col-sm-6 col-12 m-auto d-block my-3 ps-2 d-flex justify-content-center" >
       
-        <div className="card shadow" style={{ width: "18rem", height: "24rem"}} >
-           <div className="text-center p-2">
-           <img className="card-img-top img-fluid student_card_image"  style={{width: "100%", height: "200px", objectFit: "fill"}} src={studentProfileData.profile_pic=="default" ? defaultUser : studentProfileData.profile_pic}  alt="Card image cap" />
+        <div className="card shadow " style={{ width: "100%", height: "480px"}} >
+           <div className="text-center p-0">
+           <img className="card-img-top img-fluid student_card_image"  style={{width: "100%", height: "240px", objectFit: "fill"}} src={studentProfileData.profile_pic=="default" ? defaultUser : studentProfileData.profile_pic}  alt="Card image cap" />
            </div>
-           <hr/>
+           {/* <hr/> */}
          
-         <div className="card-body text-start" style={{marginTop: "-22px"}}>
+         <div className="card-body text-start" style={{marginTop: "0px"}}>
            <h5 className="card-title hr_card_text"><b>Name: </b>{studentProfileData.name}</h5>
            {/* <p className="card-text hr_card_text"><b>Type: </b>{studentProfileData.type} </p> */}
            <p className="card-text hr_card_text"><b>Qualification: </b>{studentProfileData.course} in {studentProfileData.branch}</p>

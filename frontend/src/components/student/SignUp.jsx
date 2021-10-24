@@ -123,13 +123,13 @@ const SignUp = ()=>{
 
     return(
         <>
-          <div className="signup_root_div">
-           <div className="signup_main_div">
-            <h2 style={{color: "#05e374", fontStyle: "italic", textAlign: "center"}}>Student Registration</h2>
+          <div className="signup_root_div d-flex justify-content-center align-items-center">
+           <div className="signup_main_div shadow">
+            <h2 style={{color: "#05e374", fontStyle: "italic", textAlign: "center", marginTop: "20px"}}>Student Registration</h2>
             <ToastContainer />
             <hr className="hr_line" />
-            <div className="signup_form_div">
-            <form action="POST" className="signup" onSubmit={studentSignupFormSubmit}>
+            <form action="POST" className="signup w-100" onSubmit={studentSignupFormSubmit}>
+            <div className="signup_form_div p-4"  style={{marginLeft: "-102px"}}>
                 <div className="mb-3">
                     <label htmlFor="exampleInputName" className="form-label form_input_label">Name*</label>
                     <input type="text" placeholder="Enter name" className="form-control signup_form_input" id="exampleInputEmail1" aria-describedby="emailHelp" name="name" required value={name} onChange={inputFieldChange} />
@@ -159,7 +159,9 @@ const SignUp = ()=>{
                     <label htmlFor="exampleInputPhone" className="form-label form_input_label">Phone Number*</label>
                     <input type="number" placeholder="Enter phone number" className="form-control signup_form_input" id="exampleInputPhone" aria-describedby="emailHelp" name="phoneNumber"  value={phoneNumber} onChange={inputFieldChange}  required />
                 </div>
-                <div className="d-flex justify-content-start align-items-center" style={{width: "500px"}}>
+
+                <div className="row mt-4" >
+                <div className="col-lg-6 col-md-12 col-sm-12 col-12 d-flex justify-content-start align-items-center pb-3 ps-3">
                 <div>
                 <button type="submit" className="btn btn-success mt-0"><PersonAddIcon className="mr-1"/>SignUp</button>
                 </div>
@@ -168,12 +170,13 @@ const SignUp = ()=>{
                   progressbarState ? <CircularProgress style={{color: "green"}} /> : null
                 }
                 </div>
-                <div>
+                </div> 
+                <div className="col-lg-6 col-md-12 col-sm-12 col-12 mt-md-1 mt-sm-1 mt-1 text-start">
                   <NavLink exact to="/login" ><p className=" mt-2">Already have an Account?</p></NavLink>
                 </div>
                 </div>
+                </div>
             </form>
-            </div>
             </div>
             </div>
         </>

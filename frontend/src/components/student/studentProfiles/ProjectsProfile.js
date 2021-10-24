@@ -77,16 +77,16 @@ const ProjectsProfile = ({studentProjects, fetchStudentDataFromServer})=>{
         <div>
         <ToastContainer />
         <div className="row m-auto">
-          <div className="col-4">
+          <div className="col-6">
             <p style={{textAlign: "start", fontSize: "24px", color: "#ee00aa"}}><b>Projects</b></p>
           </div>
-          <div className="col-4 text-start">
+          <div className="col-6 text-start">
             <button type="button" className="btn btn-primary fw-bold" data-toggle="modal" data-target="#exampleModalCenterprojects" style={{fontSize: "13px"}}>Add Project</button>
           </div>
          </div>
 
         <hr style={{marginTop: "-6px"}}/>
-           <div className="row mt-0 text-start">
+           <div className="row m-0 p-0 text-start">
             {
               studentProjects.map((projectDetails, index)=>{
                 return(

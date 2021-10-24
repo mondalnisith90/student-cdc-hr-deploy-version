@@ -95,12 +95,12 @@ const WorkExperienceCard = ({workExperienceDetails, modelId, fetchStudentDataFro
 
 
     return(
-        <div>
+        <div className="p-0">
          <ToastContainer />
-        <div className="col-lg-12 col-md-12 col-sm-12 col-12 m-auto">
+        <div className="col-lg-12 col-md-12 col-sm-12 col-12 m-auto d-block p-2">
         <div className="card my-3 shadow" style={{backgroundColor: "#ebf0ed", border: "3px solid orange"}}>
-          <div className="card-header d-flex justify-content-between"  style={{backgroundColor: "orange", color: "white"}} >
-          <div>
+          <div className="card-header  d-flex justify-content-between"  style={{backgroundColor: "orange", color: "white"}} >
+          <div className="">
            <h5>{workExperienceDetails.jobTitle}</h5>
           </div>
           

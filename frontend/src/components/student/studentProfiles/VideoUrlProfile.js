@@ -72,15 +72,15 @@ const VideoUrlProfile = ({studentVideoUrls, fetchStudentDataFromServer})=>{
         <div>
         <ToastContainer />
         <div className="row m-auto">
-          <div className="col-4">
+          <div className="col-12 col-sm-6 col-md-6 col-lg-6">
             <p style={{textAlign: "start", fontSize: "24px", color: "#ee00aa"}}><b>Video Links</b></p>
           </div>
-          <div className="col-4 text-start">
+          <div className="col-12 col-sm-6 col-md-6 col-lg-6 text-start">
             <button type="button" className="btn btn-primary fw-bold" data-toggle="modal" data-target="#exampleModalCentervideourl" style={{fontSize: "13px"}}>Add Video</button>
           </div>
          </div>
-        <hr style={{marginTop: "-6px"}}/>
-           <div className="row mt-0 text-center">
+        <hr />
+           <div className="row mt-0 text-center p-2">
              {
               studentVideoUrls && studentVideoUrls.length==0 ? <p>No video links</p> : null
              } 

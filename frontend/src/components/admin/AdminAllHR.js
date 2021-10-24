@@ -17,6 +17,7 @@ const AdminAllHR = ()=>{
 
     const fetchDataFromServer = async ()=>{
         const apiUrl = `/hr/viewall`;
+        // const apiUrl = ` http://localhost:8000/hr/viewall`;
         try {
             const serverResponse = await axios.get(apiUrl);
             setAllHrsdata(serverResponse.data);
@@ -56,8 +57,9 @@ const AdminAllHR = ()=>{
     return(
         <>
     <div className="admin_dashboard_root_div">
-     <AdminDashboardNav />
-     <div className="d-flex justify-content-center mt-3">
+     <AdminDashboardNav style={{paddingTop: "200px"}} />
+
+     {/* <div className="d-flex justify-content-center mt-3">
      <button type="button" class="btn btn-outline-danger" onClick={refreshButtonClick} style={{marginRight: "8px", fontSize: "16px"}}>Refresh</button>
      <div>
         <form class="form-inline my-2 my-lg-0">
@@ -65,20 +67,34 @@ const AdminAllHR = ()=>{
          <button class="btn btn-outline-success my-2 my-sm-0"  onClick={hrSearchFormSubmit} >Search</button>
        </form>
      </div>
+     </div> */}
+
+     <div className="d-flex p-1 justify-content-center align-items-center  flex-lg-row flex-md-row flex-sm-column flex-column" style={{marginTop: "20px"}}>
+         <div className="">
+           <button type="button" class="btn btn-outline-danger home_refresh_button" onClick={refreshButtonClick} style={{marginRight: "8px", fontSize: "16px"}}>Refresh</button>
+         </div>
+         <div className="">
+         <form class="form-inline my-0 my-lg-0">
+         <input class="form-control mr-sm-2" type="search" placeholder="Search HR..." aria-label="Search" onChange={inputFieldChange} name="hrSearchField" value={hrSearchField} />
+         <button class="btn btn-outline-success my-2 my-sm-0"  onClick={hrSearchFormSubmit}>Search</button>
+       </form>
+     </div> 
      </div>
+
+
       {
         allHrsData.length ? null : <p style={{color: "#ee00aa", fontSize: "30px", fontWeight: "600", textAlign: "center", marginTop: "30px"}}>Data not found</p>
-      } 
+      }
 
-     <div className="row mt-4 container-fluid ">
+      <hr className="hr_line" />
+
+     <div className="row mt-2 m-0 p-0 container-fluid ">
      {
         allHrsData.map((Hr, index)=>{
             
             if(Hr.isGranted=="true"){
-                console.log("All Hr map data")
-            console.log(Hr)
                 return(
-                <div className="col-lg-3 col-md-3 col-sm-6 col-12 m-auto text-center mb-3 d-flex justify-content-center" key={index}>
+                <div className="col-lg-3 col-md-6 col-sm-6 col-12 m-auto d-block p-0  my-3 pe-sm-3 text-center mb-3 d-flex justify-content-center" key={index}>
                   <HrCard HrData={Hr} fetchDataFromServer={fetchDataFromServer} />
                 </div>
             )

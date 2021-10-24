@@ -40,6 +40,7 @@ const Home = ()=>{
           try {
             //   setLinearProgressbarState(true);
               const apiUrl = `/hr/get-profile`;
+            // const apiUrl = `http://localhost:8000/hr/get-profile`;
               const serverResponse = await axios.get(apiUrl, {withCredentials: true});
               if(serverResponse.status == 200){
                 //   setLinearProgressbarState(false);
@@ -83,6 +84,7 @@ const Home = ()=>{
         }
         try {
             const apiUrl = `/student/search/value/${searchingValue}`;
+            // const apiUrl = `http://localhost:8000/student/search/value/${searchingValue}`;
             const serverResponse = await axios.get(apiUrl);
             if(serverResponse.status == 200){
                 setAllStudentsData(serverResponse.data);

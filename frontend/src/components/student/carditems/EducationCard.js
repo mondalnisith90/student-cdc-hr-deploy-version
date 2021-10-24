@@ -82,9 +82,9 @@ const EducationCard = ({educationDetails, modelId, fetchStudentDataFromServer})=
 
 
     return(
-        <div>
+        <div className="p-0">
          <ToastContainer />
-        <div className="col-lg-12 col-md-12 col-sm-12 col-12 m-auto">
+        <div className="col-lg-12 col-md-12 col-sm-12 col-12 m-auto d-block p-0">
         <div className="card my-3 shadow" style={{backgroundColor: "#ebf0ed", border: "3px solid #009431"}}>
           <div className="card-header d-flex justify-content-between"  style={{backgroundColor: "#009431", color: "white"}} >
           <div>

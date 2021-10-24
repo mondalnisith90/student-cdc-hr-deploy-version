@@ -77,16 +77,16 @@ const EducationComponent = ({studentEducations, fetchStudentDataFromServer})=>{
         <div>
         <ToastContainer />
         <div className="row m-auto">
-          <div className="col-4">
+          <div className="col-lg-6 col-md-6 col-sm-6 col-12">
             <p style={{textAlign: "start", fontSize: "24px", color: "#ee00aa"}}><b>Educations</b></p>
           </div>
-          <div className="col-4 text-start">
+          <div className="col-lg-6 col-md-6 col-sm-6 col-12 text-start">
             <button type="button" className="btn btn-primary fw-bold" data-toggle="modal" data-target="#exampleModalCentereducation" style={{fontSize: "13px"}}>Add Education</button>
           </div>
          </div>
 
-        <hr style={{marginTop: "-6px"}}/>
-           <div className="row mt-0 text-start">
+        <hr />
+           <div className="row text-start p-0 m-0">
             {
               studentEducations.map((educationDetails, index)=>{
                 return(

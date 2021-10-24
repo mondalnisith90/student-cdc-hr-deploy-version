@@ -1,0 +1,17 @@
+.navbar_navlink_admin {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 20px;
+  color: #bac0c0 !important;
+  font-weight: 500 !important;
+  padding: 6px !important;
+}
+
+.navlink_active_admin {
+  border-bottom: 4px solid #ffffff;
+  color: white !important;
+  font-weight: 700 !important;
+}
+
+.navbar_navlink_admin:hover {
+  color: white !important;
+}

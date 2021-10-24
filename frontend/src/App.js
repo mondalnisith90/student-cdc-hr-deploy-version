@@ -51,7 +51,7 @@ const App = () => {
         //Fetch HR data from server when app is load
         console.log("hello home HR is called");
         console.log(currentUserData.type);
-         apiUrl = `/hr/get-profile`;
+        apiUrl = `/hr/get-profile`;
         //  apiUrl = `http://localhost:8000/hr/get-profile`;
         //  setCurrentUserData({...currentUserData, isGranted: "true"});
       }else{

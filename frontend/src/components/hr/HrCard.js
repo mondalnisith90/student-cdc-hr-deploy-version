@@ -33,9 +33,9 @@ const StudentCard = ({HrData, fetchDataFromServer})=>{
     return(
         <>
           <ToastContainer />
-           <div className="card shadow" style={{ width: "18rem" }} >
-           <div className="text-center p-2">
-           <img className="card-img-top img-fluid student_card_image"  style={{width: "100%", height: "200px", objectFit: "fill"}}  src={HrData.profile_pic=="default" ? defaultUser : HrData.profile_pic}  alt="Card image cap" />
+           <div className="card shadow" style={{ width: "100%", height: "520px" }} >
+           <div className="text-center p-0">
+           <img className="card-img-top img-fluid student_card_image"  style={{width: "100%", height: "240px", objectFit: "fill"}}  src={HrData.profile_pic=="default" ? defaultUser : HrData.profile_pic}  alt="Card image cap" />
            </div>
            {/* <hr/> */}
          
@@ -45,7 +45,7 @@ const StudentCard = ({HrData, fetchDataFromServer})=>{
            <p className="card-text hr_card_text"><b>Email Id: </b> {HrData.email}</p>
            <p className="card-text hr_card_text" style={{marginTop: "-8px"}}><b>Company Name: </b> {HrData.companyName}</p>
            <p className="card-text hr_card_text"><b>Phone Number: </b> {HrData.phoneNumber} </p>
-           <div className="d-flex justify-content-start align-content-center">
+           <div className="d-flex justify-content-start align-content-center  pl-0 pb-3">
              <div>
                <button href="#" className="btn btn-success">Details</button>
              </div>

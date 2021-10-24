@@ -64,6 +64,8 @@ const StudentProfile = () => {
     
     const fetchStudentDataFromServer = async ()=>{
       const apiUrl = `/student/search/${currentUserData.userId}`;
+      // const apiUrl = `http://localhost:8000/student/search/${currentUserData.userId}`;
+      
       try {
         const serverResponse = await axios.get(apiUrl);
         if(serverResponse.status == 200){
@@ -196,9 +198,9 @@ const StudentProfile = () => {
 
     return(
         <>
-        <section className="myprofile_root_div d-flex justify-content-center">
+        <section className="myprofile_root_div d-flex justify-content-center align-items-center">
         <ToastContainer />
-        <div className="text-center shadow header_div_style p-4">
+        <div className="text-center shadow header_div_style p-0 ">
            <img src={profile_pic_url} alt="" className="myprofile_profile_pic" />
           
            <input accept="image/*" id="icon-button-file" type="file"  style={{display: "none"}} onChange={inputFieldChange} name="profile_pic" />
@@ -209,8 +211,6 @@ const StudentProfile = () => {
                   </Tooltip>
                 </IconButton>
               </label>
-
-
               {updateImageButtonState ? 
            <>
            <div className="d-flex align-items-center justify-content-center mt-2">
@@ -236,20 +236,20 @@ const StudentProfile = () => {
 
            <h2 className="myprofile_user_name">{studentData.name}<EditIcon className="edit_profile_icon" onClick={profileEditIconClick}  data-toggle="modal" data-target="#exampleModalCenterstudentprofile" /></h2>
              <hr className="hr_line" />
-           <div className="row text-start mt-4">
-            <div className="col-6 m-auto">
+           <div className="row text-start  mt-4">
+            <div className="col-12 col-sm-12 col-md-6 col-lg-6">
              <p><b>Qualification: </b>{studentData.course} in {studentData.branch}</p>
             </div>
-            <div className="col-6 m-auto text-end">
+            <div className="col-12 col-sm-12 col-md-6 col-lg-6 text-lg-end text-md-end text-sm-start text-start">
               <p><b>Phone Number: </b>{studentData.phoneNumber}</p>
             </div>
            </div>
 
-           <div className="row text-start" style={{marginTop: "-10px"}}>
-            <div className="col-6 m-auto">
+            <div className="row text-start" style={{marginTop: "-10px"}}>
+            <div className="col-12 col-sm-12 col-md-6 col-lg-6 ">
             <p><b>Linkedin Link: </b><a href={studentData.linkedinLink} target="_blank" style={{fontSize: "15px"}}>{studentData.linkedinLink}</a></p>
             </div>
-            <div className="col-6 m-auto text-end">
+            <div className="col-12 col-sm-12 col-md-6 col-lg-6 text-lg-end text-md-end text-sm-start text-start">
               <p><b>Email Id: </b>{studentData.email}</p>
             </div>
            </div>
@@ -408,7 +408,7 @@ const StudentProfile = () => {
            <hr className="hr_line"/>
 
           
-           <p style={{textAlign: "start"}}>
+            <p style={{textAlign: "start"}}>
            <b>Carrier Objective: </b> <br/> {studentData.carrierObjective}
            </p>
            <hr className="hr_line"/>
@@ -425,7 +425,7 @@ const StudentProfile = () => {
            <FieldofInterestProfile  studentFieldOfInterest = {studentData.fieldsOfInterest ? studentData.fieldsOfInterest : []} fetchStudentDataFromServer={fetchStudentDataFromServer}  />
            <hr className="hr_line mb-4 mt-4"/>
            <VideoUrlProfile  studentVideoUrls = {studentData.videoUrl ? studentData.videoUrl : []} fetchStudentDataFromServer={fetchStudentDataFromServer}  />
-           <hr className="hr_line mb-4 mt-4"/>
+           <hr className="hr_line mb-4 mt-4"/> 
 
 
 

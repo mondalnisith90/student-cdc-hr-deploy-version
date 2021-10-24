@@ -88,7 +88,7 @@ const LanguageCard = ({
   };
 
   return (
-    <div>
+    <div className="p-0">
      <ToastContainer />
       <div className="col-lg-12 col-md-12 col-sm-12 col-12 m-auto">
         <div

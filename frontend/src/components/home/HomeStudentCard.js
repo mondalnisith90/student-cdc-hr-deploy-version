@@ -41,6 +41,7 @@ const HomeStudentCard = ({studentData, modalId, hrSortlistedProfileData, fetchHr
         //When hr add a student profile on his/her add to cart items
         if(currentUserData.type=="hr" && currentUserData.isGranted=="true"){
           const apiUrl = `/hr/add-student-profile`;
+          // const apiUrl = `http://localhost:8000/hr/add-student-profile`;
           const data = {
             studentId: studentData._id
           }
